@@ -8,14 +8,8 @@ The app needs a mongodb database to be able to run it.
 This is a python *(flask)* application. To download it:
 
 ```bash
-$ git clone https://github.com/peeriq/devops-challenge.git
-Cloning into 'devops-challenge'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0)
-Receiving objects: 100% (3/3), done.
-$ cd ./devops-challenge
+git clone https://github.com/peeriq/devops-challenge.git
+cd ./devops-challenge
 ```
 
 ### Run the tests
@@ -25,10 +19,8 @@ $ cd ./devops-challenge
 This python app contains some tests. To run it in your own host:
 
 ```bash
-$ pwd
-devops-challenge
-$ pip install tox
-$ tox
+pip install tox
+tox
 ___________________________________________________________________________________________ summary ___________________________________________________________________________________________
   py27: commands succeeded
   py37: commands succeeded
@@ -38,9 +30,7 @@ ________________________________________________________________________________
 If you prefer, you can run the tests in a container:
 
 ```bash
-$ pwd
-devops-challenge
-$ docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
+docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
 ___________________________________________________________________________________________ summary ___________________________________________________________________________________________
   py27: commands succeeded
   py37: commands succeeded
@@ -53,11 +43,11 @@ ________________________________________________________________________________
 If you want to run the app locally:
 
 ```bash
-$ virtualenv -p python3 .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-$ export MONGO_URI=mongodb://YOUR_USERNAME:YOUR_PASSWORD@YOUR_MONGO_HOST:YOUR_MONGO_PORT/YOUR_MONGO_DB_NAME
-$ python app.py
+virtualenv -p python3 .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+export MONGO_URI=mongodb://YOUR_USERNAME:YOUR_PASSWORD@YOUR_MONGO_HOST:YOUR_MONGO_PORT/YOUR_MONGO_DB_NAME
+python app.py
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
