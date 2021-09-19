@@ -31,7 +31,7 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 - [ ] Create sample pull request.
 - [ ] Run mongodb locally at standard port; test local app.
 - [ ] Dockerize App
-- [ ] Dockerize Database + Load Data
+- [ ] Dockerize Database + Create App user + Load Data
 - [ ] Docker Compose
 - [ ] API returns json object instead of json array.
 - [ ] Update tox test: https://www.geeksforgeeks.org/how-to-return-a-json-object-from-a-python-function/
