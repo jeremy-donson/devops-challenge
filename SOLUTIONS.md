@@ -28,7 +28,7 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 
 #### Challenge Steps
 - [x] Add SOLUTIONS.md file.
-- [ ] Create sample pull request.
+- [x] Create [draft pull request]().
 - [ ] Run mongodb locally at standard port; test local app.
 - [ ] Dockerize App
 - [ ] Dockerize Database + Create App user + Load Data
