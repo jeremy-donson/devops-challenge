@@ -15,6 +15,13 @@ tox
 # docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
 
 # run mongodb locally at standard port
+curl -s 
+brew tap mongodb/brew; brew install mongodb-community;  mongod --config /usr/local/etc/mongod.conf& # mongo admin --eval "db.shutdownServer()"
+mongosh show dbs
+mongoimport --db test --collection inventory \
+       --authenticationDatabase admin  \
+       --drop --file ~/Downloads/inventory.crud.json
+
 
 virtualenv -p python3 .venv
 source .venv/bin/activate
