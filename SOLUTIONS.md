@@ -29,7 +29,7 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 #### Challenge Steps
 - [x] Add SOLUTIONS.md file.
 - [x] Create [draft pull request](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge).
-- [ ] Run mongodb locally at standard port; test local app.
+- [ ] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
 - [ ] Dockerize App
 - [ ] Dockerize Database + Create App user + Load Data
 - [ ] Docker Compose
