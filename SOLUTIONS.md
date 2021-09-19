@@ -1,19 +1,19 @@
 Challenge Steps:
-- [ ]: Add SOLUTIONS.md file.
-- [ ]: Create sample pull request.
-- [ ]: Run mongodb locally at standard port; test local app.
-- [ ]: Dockerize App
-- [ ]: Dockerize Database + Load Data
-- [ ]: Docker Compose
-- [ ]: API returns json object instead of json array.
-- [ ]: Update tox test: https://www.geeksforgeeks.org/how-to-return-a-json-object-from-a-python-function/
-- [ ]: Github Actions => heroku?gitpod?gce?gke
-- [ ]: Deploy Using Helm + kubectl
-- [ ]: Stern to tail pod logs
+- [ ] Add SOLUTIONS.md file.
+- [ ] Create sample pull request.
+- [ ] Run mongodb locally at standard port; test local app.
+- [ ] Dockerize App
+- [ ] Dockerize Database + Load Data
+- [ ] Docker Compose
+- [ ] API returns json object instead of json array.
+- [ ] Update tox test: https://www.geeksforgeeks.org/how-to-return-a-json-object-from-a-python-function/
+- [ ] Github Actions => heroku?gitpod?gce?gke
+- [ ] Deploy Using Helm + kubectl
+- [ ] Stern to tail pod logs
 
-- [ ]: Create pull request + email url to Zvika.
-- [ ]: Do we prefer python3?
-- [ ]: Several new python tools@play: asdf, direnv, pipenv, poetry, pipx, other?
+- [ ] Create pull request + email url to Zvika.
+- [ ] Do we prefer python3?
+- [ ] Several new python tools@play: asdf, direnv, pipenv, poetry, pipx, other?
 				=> Several mentioned here: https://towardsdatascience.com/packaging-in-python-tools-and-formats-743ead5f39ee
 				=> And here: https://www.jwillikers.com/manage-python-dependencies
 
