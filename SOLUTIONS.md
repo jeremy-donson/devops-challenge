@@ -1,6 +1,7 @@
 - [Assignment Repo](https://github.com/peeriq/devops-challenge)
 - [Working Forked Repo Branch](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge)
 - [MongoDB Reference](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker)
+- [Heroku Flask Mongo Reference](https://github.com/alexeyza/startup-programming/blob/master/past%20semesters/fall%202014/resources/tutorials/heroku%20python%20with%20flask%20mongodb%20shoutout.md)
 
 - Local Dev Setup
 ```
