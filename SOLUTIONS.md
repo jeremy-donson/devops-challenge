@@ -1,9 +1,12 @@
+## PeerIQ Dev Ops Candidate: Jeremy Donson
+
+#### Links + References
 - [Assignment Repo](https://github.com/peeriq/devops-challenge)
 - [Working Forked Repo Branch](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge)
 - [MongoDB Reference](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker)
 - [Heroku Flask Mongo Reference](https://github.com/alexeyza/startup-programming/blob/master/past%20semesters/fall%202014/resources/tutorials/heroku%20python%20with%20flask%20mongodb%20shoutout.md)
 
-- Local Dev Setup
+#### Local Dev Setup
 ```
 git clone https://github.com/peeriq/devops-challenge.git
 cd ./devops-challenge
@@ -22,7 +25,8 @@ curl localhost:8080/api/v1/restaurant | jq
 curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 
 ```
-Challenge Steps:
+
+#### Challenge Steps
 - [x] Add SOLUTIONS.md file.
 - [ ] Create sample pull request.
 - [ ] Run mongodb locally at standard port; test local app.
