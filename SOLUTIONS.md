@@ -42,6 +42,6 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 - [ ] Create pull request + email url to Zvika.
 - [ ] Do we prefer python3?
 - [ ] Several new python tools@play: asdf, direnv, pipenv, poetry, pipx, other?
-				=> Several mentioned here: https://towardsdatascience.com/packaging-in-python-tools-and-formats-743ead5f39ee
-				=> And here: https://www.jwillikers.com/manage-python-dependencies
+  - Several mentioned here: https://towardsdatascience.com/packaging-in-python-tools-and-formats-743ead5f39ee
+  - And here: https://www.jwillikers.com/manage-python-dependencies
 
