@@ -18,14 +18,23 @@ tox
 
 # run mongodb locally at standard port
 curl -s https://raw.githubusercontent.com/peeriq/devops-challenge/main/data/restaurant.json
-brew tap mongodb/brew; brew install mongodb-community;  mongod --config /usr/local/etc/mongod.conf& # mongo admin --eval "db.shutdownServer()"
-mongosh show dbs
+brew tap mongodb/brew; brew install mongodb-community
+mongod --config /usr/local/etc/mongod.conf # To Shutdown mongodb: $ mongo admin --eval "db.shutdownServer()"
+mongosh 
+# Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000
+# Using MongoDB:		5.0.2
+# Using Mongosh:		1.0.6
+
+
 mongoimport --db test --collection inventory \
        --authenticationDatabase admin  \
        --drop --file restaurant.json
 
-virtualenv -p python3 .venv
-source .venv/bin/activate
+asdf plugin-add poetry https://github.com/asdf-community/asdf-poetry.git
+brew install direnv
+
+python --version
+tox
 pip install -r requirements.txt
 export MONGO_URI=mongodb://YOUR_USERNAME:YOUR_PASSWORD@YOUR_MONGO_HOST:YOUR_MONGO_PORT/YOUR_MONGO_DB_NAME
 python app.py
@@ -38,7 +47,8 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 - [x] Add SOLUTIONS.md file.
 - [x] Create [draft pull request](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge).
 - [x] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
-
+- [ ] [asdf]() and [direnv](https://direnv.net/)
+- [ ] Mongodb: access control, dbadmin, restaurants; load; count; select; insert
 - [ ] Dockerize App
 - [ ] Dockerize Database + Create App user + Load Data
 - [ ] Docker Compose
