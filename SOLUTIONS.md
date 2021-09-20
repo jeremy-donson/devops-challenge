@@ -30,9 +30,10 @@ mongoimport --db test --collection inventory \
        --authenticationDatabase admin  \
        --drop --file restaurant.json
 
+brew install asdf
 asdf plugin-add poetry https://github.com/asdf-community/asdf-poetry.git
+asdf install poetry latest
 brew install direnv
-
 python --version
 tox
 pip install -r requirements.txt
