@@ -11,6 +11,8 @@ cd ~/repos/_py3-flask/
 # I forked https://github.com/peeriq/devops-challenge.git
 git clone https://github.com/jeremy-donson/devops-challenge.git  
 cd ./devops-challenge
+
+
 curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py > get-pip.py; python get-pip.py
 pip install tox
 tox 
@@ -61,10 +63,23 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 
 ```
 
-#### Challenge Steps
+#### Challenge Next Steps
 - [x] Add SOLUTIONS.md file.
 - [x] Create [draft pull request](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge).
 - [x] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
+- [ ] Bring up mongodb service , set access control, create users and a database; load database
+- [ ] export mongodb connect string
+- [ ] Bring up app on python 3.8.x @ 0.0.0.0:8080
+- [ ] Fix API as instructed.
+- [ ] Show API fixed.
+- [ ] Dockerize app components
+- [ ] Docker compose file
+- [ ] Deploy to k8s
+- [ ] Then we might return to the varied python versions?
+
+---
+
+
 - [!!] Due to python 3.9.x installed locally, tox 3.x tests failed.  Venv did not resolve.
 - [ ] Resolution: [asdf]() and [direnv](https://direnv.net/)
 - [ ] Mongodb: access control, dbadmin, restaurants; load; count; select; insert
