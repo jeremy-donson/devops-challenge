@@ -5,8 +5,8 @@
 - [Working Forked Repo Branch](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge)
 
 #### Local Dev Setup
-```
 
+```
 cd ~/repos/_py3-flask/ 
 # I forked https://github.com/peeriq/devops-challenge.git
 git clone https://github.com/jeremy-donson/devops-challenge.git  
@@ -14,8 +14,7 @@ cd ./devops-challenge
 curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py > get-pip.py; python get-pip.py
 pip install tox
 tox
-
-docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
+# docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
 
 # run mongodb locally at standard port
 curl -s https://raw.githubusercontent.com/peeriq/devops-challenge/main/data/restaurant.json
@@ -24,7 +23,6 @@ mongosh show dbs
 mongoimport --db test --collection inventory \
        --authenticationDatabase admin  \
        --drop --file restaurant.json
-
 
 virtualenv -p python3 .venv
 source .venv/bin/activate
@@ -39,7 +37,8 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 #### Challenge Steps
 - [x] Add SOLUTIONS.md file.
 - [x] Create [draft pull request](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge).
-- [ ] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
+- [x] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
+
 - [ ] Dockerize App
 - [ ] Dockerize Database + Create App user + Load Data
 - [ ] Docker Compose
