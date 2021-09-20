@@ -13,7 +13,7 @@ git clone https://github.com/jeremy-donson/devops-challenge.git
 cd ./devops-challenge
 curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py > get-pip.py; python get-pip.py
 pip install tox
-tox
+tox # FAILED
 # docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
 
 # run mongodb locally at standard port
@@ -30,11 +30,13 @@ mongoimport --db test --collection inventory \
        --authenticationDatabase admin  \
        --drop --file restaurant.json
 
-brew install asdf
+brew install asdf direnv
 asdf plugin-add poetry https://github.com/asdf-community/asdf-poetry.git
 asdf install poetry latest
-brew install direnv
+
 python --version
+
+
 tox
 pip install -r requirements.txt
 export MONGO_URI=mongodb://YOUR_USERNAME:YOUR_PASSWORD@YOUR_MONGO_HOST:YOUR_MONGO_PORT/YOUR_MONGO_DB_NAME
@@ -48,7 +50,8 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 - [x] Add SOLUTIONS.md file.
 - [x] Create [draft pull request](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge).
 - [x] [Install](https://github.com/mongodb/homebrew-brew) mongodb locally at standard port; test local app.
-- [ ] [asdf]() and [direnv](https://direnv.net/)
+- [!!] Due to python 3.9.x installed locally, tox 3.x tests failed.  Venv did not resolve.
+- [ ] Resolution: [asdf]() and [direnv](https://direnv.net/)
 - [ ] Mongodb: access control, dbadmin, restaurants; load; count; select; insert
 - [ ] Dockerize App
 - [ ] Dockerize Database + Create App user + Load Data
