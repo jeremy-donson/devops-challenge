@@ -8,7 +8,7 @@
 
 ```
 cd ~/repos/_py3-flask/
-# I forked https://github.com/peeriq/devops-challenge.git
+# Forked https://github.com/peeriq/devops-challenge.git
 git clone https://github.com/jeremy-donson/devops-challenge.git  
 cd ./devops-challenge
 
