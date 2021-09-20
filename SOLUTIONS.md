@@ -48,7 +48,7 @@ asdf list all python | grep ^3.
 asdf install python 3.8.12
 echo 'python 3.8.12' >> ~/.tool-versions
 python --version  # Python 3.8.12
-
+/Users/admin/.asdf/installs/python/3.8.12/bin/python -m pip install --upgrade pip
 python --version
 
 
