@@ -3,16 +3,19 @@
 #### Links + References
 - [Assignment Repo](https://github.com/peeriq/devops-challenge)
 - [Working Forked Repo Branch](https://github.com/jeremy-donson/devops-challenge/tree/jeremy-donson-peeriq-devops-challenge)
-- [MongoDB Reference](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker)
-- [Heroku Flask Mongo Reference](https://github.com/alexeyza/startup-programming/blob/master/past%20semesters/fall%202014/resources/tutorials/heroku%20python%20with%20flask%20mongodb%20shoutout.md)
 
 #### Local Dev Setup
 ```
-git clone https://github.com/peeriq/devops-challenge.git
+
+cd ~/repos/_py3-flask/ 
+# I forked https://github.com/peeriq/devops-challenge.git
+git clone https://github.com/jeremy-donson/devops-challenge.git  
 cd ./devops-challenge
+curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py > get-pip.py; python get-pip.py
 pip install tox
 tox
-# docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
+
+docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox
 
 # run mongodb locally at standard port
 curl -s https://raw.githubusercontent.com/peeriq/devops-challenge/main/data/restaurant.json
