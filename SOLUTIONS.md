@@ -13,8 +13,13 @@ git clone https://github.com/jeremy-donson/devops-challenge.git
 cd ./devops-challenge
 curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py > get-pip.py; python get-pip.py
 pip install tox
-tox # FAILED python 3.x tests due to python 3.9.x locally installed.
-docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox # FAILED
+tox 
+:'
+  py27: commands succeeded
+ERROR:  py37: InterpreterNotFound: python3.7
+ERROR:  py38: InterpreterNotFound: python3.8
+'
+# docker run -it -v $(pwd):/tmp/app -w /tmp/app --rm painless/tox /bin/bash tox # FAILED
 
 # run mongodb locally at standard port
 brew tap mongodb/brew; brew install mongodb-community
@@ -31,15 +36,19 @@ mongosh
 echo "alias reload='source ~/.bash_profile'\nalias brewup='brew upgrade; brew update; brew cleanup" >> ~/.bash_profile
 source ~/.bash_profile
 brew doctor ; brewup
-brew install asdf
+brew install asdf direnv
 asdf # Error corrected next line: https://github.com/asdf-vm/asdf/issues/428
 echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile; reload; asdf
 echo 'legacy_version_file = yes' >> ~/.asdfrc
 
-brew install asdf direnv
+# https://github.com/danhper/asdf-python
 asdf plugin-add python
 export ASDF_PYTHON_PATCH_URL="https://github.com/python/cpython/commit/8ea6353.patch?full_index=1"
-asdf install python 3.6.12
+asdf list all python | grep ^3.
+asdf install python 3.8.12
+echo 'python 3.8.12' >> ~/.tool-versions
+python --version  # Python 3.8.12
+
 python --version
 
 
